@@ -42,10 +42,24 @@
       }
     </style>
   </head>
-  <body class=".font-lato">
+
+  <div class="modal" id="modal-1">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg">Hello!</h3>
+      <p class="py-4">This modal works with anchor links</p>
+      <div class="modal-action">
+       <a href="#card-1" class="btn">Buy Now</a>
+       <a href="#card-1" class="btn">close</a>
+      </div>
+    </div>
+  </div>
+
+  <body class="font-lato">
     <header class="md:container md:mx-auto mx-3 my-10">
-      <div class="navbar bg-[#F85559] rounded-[600px]">
-        <div class="navbar-start hidden lg:flex">
+      <div
+        class="navbar bg-[#F85559] rounded-full flex justify-between items-center"
+      >
+        <div class="hidden lg:flex">
           <ul
             class="menu menu-horizontal px-1 lg:text-white md:text-white text-black"
           >
@@ -57,7 +71,7 @@
           </ul>
         </div>
 
-        <div class="navbar-center">
+        <div class="">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
               <svg
@@ -93,14 +107,10 @@
           >
         </div>
 
-        <div class="navbar-end relative">
-          <input
-            type=" lg:text "
-            placeholder="Search here"
-            class="input input-bordered input-sm w-full max-w-xs"
-          />
+        <div class="hidden lg:flex bg-white px-4 py-2 rounded-full">
+          <input type="text" placeholder="Search here" class="outline-none" />
           <img
-            class="w-4 absolute right-6"
+            class="w-4 right-6"
             src="./images/Frame (4).png"
             alt=""
             srcset=""
@@ -233,33 +243,31 @@
         </div>
       </div>
 
-      <!-- <div class="w-[800px] h-[200px] bg-[#FFF] mx-auto rounded-lg grid grid-cols-5 py-6 px-8 gap-3 absolute -bottom-56 right-2 left-5 ">
-          <div>
-            <img class="w-28" src="./images/fruit1.png" alt="" srcset="">
-            <p class="ml-6">Grape</p>
-          </div>
-          <div>
-            <img class="w-24" src="./images/fruit2.png" alt="" srcset="">
-            <p class="ml-6">Orange</p>
-          </div>
-          <div>
-            <img class="w-28" src="./images/fruit3.png" alt="" srcset="">
-            <p class="ml-6">Mango</p>
-          </div>
-          <div>
-            <img class="w-28" src="./images/fruit4.png" alt="" srcset="">
-            <p class="ml-6">strawberry</p>
-          </div>
-          
-          <div>
-            <img class="w-28" src="./images/fruit5.png" alt="" srcset="">
-            <p class="ml-6">Pomegranate</p>
-          </div>
+      <div
+        class="w-[800px] h-[200px] bg-[#FFF] mx-auto rounded-lg lg:grid grid-cols-5 py-6 px-8 gap-3 relative -top-32 right-2 left-5 hidden"
+      >
+        <div>
+          <img class="w-28" src="./images/fruit1.png" alt="" srcset="" />
+          <p class="ml-6">Grape</p>
+        </div>
+        <div>
+          <img class="w-24" src="./images/fruit2.png" alt="" srcset="" />
+          <p class="ml-6">Orange</p>
+        </div>
+        <div>
+          <img class="w-28" src="./images/fruit3.png" alt="" srcset="" />
+          <p class="ml-6">Mango</p>
+        </div>
+        <div>
+          <img class="w-28" src="./images/fruit4.png" alt="" srcset="" />
+          <p class="ml-6">strawberry</p>
+        </div>
 
-         
-
-
-         </div>  -->
+        <div>
+          <img class="w-28" src="./images/fruit5.png" alt="" srcset="" />
+          <p class="ml-6">Pomegranate</p>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -314,7 +322,7 @@
         <div class="grid grid-cols-1 md:grid-col-2 lg:grid-cols-4 gap-3">
           <!-- 1st card -->
 
-          <div class="card bg-[##FFFFFF] rounded-lg border">
+          <div class="card bg-[##FFFFFF] rounded-lg border" id="card-1">
             <figure class="px-10 pt-10">
               <img src="./images/fruit6.png" alt="" class="rounded-xl" />
             </figure>
@@ -379,11 +387,12 @@
                   class="bg-[#F85559] mask mask-star-2 mask-half-2"
                 />
               </div>
+              <a href="#modal-1" class="text-[#F85559]">Details</a>
             </div>
           </div>
 
           <!-- 2nd card -->
-          <div class="card bg-[##FFFFFF] rounded-lg border">
+          <div class="card bg-[##FFFFFF] rounded-lg border" id="card-2">
             <figure class="px-10 pt-10">
               <img src="./images/fruit7.png" alt="" class="rounded-xl" />
             </figure>
@@ -452,7 +461,7 @@
           </div>
 
           <!-- 3rd card -->
-          <div class="card bg-[##FFFFFF] rounded-lg border">
+          <div class="card bg-[##FFFFFF] rounded-lg border" id="card-3">
             <figure class="px-10 pt-10">
               <img src="./images/fruit8.png" alt="" class="rounded-xl" />
             </figure>
@@ -521,7 +530,7 @@
           </div>
 
           <!-- 4th-card -->
-          <div class="card bg-[##FFFFFF] rounded-lg border">
+          <div class="card bg-[##FFFFFF] rounded-lg border" id="card-4">
             <figure class="px-10 pt-10">
               <img src="./images/fruit9.png" alt="" class="rounded-xl" />
             </figure>
@@ -600,125 +609,113 @@
       </section>
 
       <!-- team section -->
-      <section class="md:container md:mx-auto mx-3 my-10">
+      <section class="md:container md:mx-auto mx-3 my-10 hidden">
         <div
           class="hero min-h-screen"
           style="background-image: url(./images/banner1.png)"
         >
           <div class="hero-overlay bg-black bg-opacity-60"></div>
-          <div class=" hero-content text-center text-neutral-content">
+          <div class="hero-content text-center text-neutral-content">
             <div class="max-w-md">
-              <h1 class="mb-5 md:text-4xl text-2xl font-bold text-center text-white">Meet the team section</h1>
-              <p class="mb-5 text-xs  ">
-                Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+              <h1
+                class="mb-5 md:text-4xl text-2xl font-bold text-center text-white"
+              >
+                Meet the team section
+              </h1>
+              <p class="mb-5 text-xs">
+                Contrary to popular belief, is not simply random text. It has
+                roots in a piece of classical Latin literature from 45 BC,
+                making it over 2000 years old.
               </p>
 
-              <!-- <div class="flex flex-col md:flex-row justify-between ">
-                <div class="text-center">
-                  <img class="w-20 md:ml-6" src="./images/member1.png" alt="" srcset="">
-                  <h4 class="flex justify-start text-xl font-bold text-white">Awlad Hossain</h4>
-                  <p class="flex justify-start text-center text-xs font-medium md:ml-10">Fruits Expert</p>
-                </div>
-                <div class="text-center">
-                  <img class="w-20 md:ml-6" src="./images/member1.png" alt="" srcset="">
-                  <h4 class="flex justify-start text-xl font-bold text-white">Awlad Hossain</h4>
-                  <p class="flex justify-start text-center text-xs font-medium md:ml-10">Fruits Expert</p>
-                </div>
-                <div class="text-center">
-                  <img class="w-20 md:ml-6" src="./images/member1.png" alt="" srcset="">
-                  <h4 class="flex justify-start text-xl font-bold text-white">Awlad Hossain</h4>
-                  <p class="flex justify-start text-center text-xs font-medium md:ml-10">Fruits Expert</p>
-                </div>
-                <div class="text-center">
-                  <img class="w-20 md:ml-6" src="./images/member1.png" alt="" srcset="">
-                  <h4 class="flex justify-start text-xl font-bold text-white">Awlad Hossain</h4>
-                  <p class="flex justify-start text-center text-xs font-medium md:ml-10">Fruits Expert</p>
-                </div>
-
-              </div> -->
+           
 
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-
-
                 <div class="card w-96">
                   <figure class="px-10 pt-10">
-                    <img  src="./images/member1.png" alt="" class="rounded-xl" />
+                    <img src="./images/member1.png" alt="" class="rounded-xl" />
                   </figure>
                   <div class="card-body items-center text-center">
                     <h2 class="card-title">Awlad Hossain</h2>
                     <p>Fruits Expert</p>
                     <div class="space-x-4">
                       <i class="fa-brands fa-facebook text-[#F85559]"></i>
-                      <i class="fa-brands fa-square-twitter text-[#F85559] "></i>
+                      <i class="fa-brands fa-square-twitter text-[#F85559]"></i>
                       <i class="fa-brands fa-linkedin text-[#F85559]"></i>
                     </div>
-                   
                   </div>
-  
-                  
-                </div>
-                <div class="card w-96 ">
-                  <figure class="px-10 pt-10">
-                    <img  src="./images/member1.png" alt="" class="rounded-xl" />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">Awlad Hossain</h2>
-                    <p>Fruits Expert</p>
-                    <div class="space-x-4">
-                      <i class="fa-brands fa-facebook text-[#F85559]"></i>
-                      <i class="fa-brands fa-square-twitter text-[#F85559] "></i>
-                      <i class="fa-brands fa-linkedin text-[#F85559]"></i>
-                    </div>
-                   
-                  </div>
-  
-                  
-                </div>
-                <div class="card w-96 ">
-                  <figure class="px-10 pt-10">
-                    <img  src="./images/member1.png" alt="" class="rounded-xl" />
-                  </figure>
-                  <div class="card-body items-center text-center">
-                    <h2 class="card-title">Awlad Hossain</h2>
-                    <p>Fruits Expert</p>
-                    <div class="space-x-4">
-                      <i class="fa-brands fa-facebook text-[#F85559]"></i>
-                      <i class="fa-brands fa-square-twitter text-[#F85559] "></i>
-                      <i class="fa-brands fa-linkedin text-[#F85559]"></i>
-                    </div>
-                   
-                  </div>
-  
-                  
                 </div>
                 <div class="card w-96">
                   <figure class="px-10 pt-10">
-                    <img  src="./images/member1.png" alt="" class="rounded-xl" />
+                    <img src="./images/member1.png" alt="" class="rounded-xl" />
                   </figure>
                   <div class="card-body items-center text-center">
                     <h2 class="card-title">Awlad Hossain</h2>
                     <p>Fruits Expert</p>
                     <div class="space-x-4">
                       <i class="fa-brands fa-facebook text-[#F85559]"></i>
-                      <i class="fa-brands fa-square-twitter text-[#F85559] "></i>
+                      <i class="fa-brands fa-square-twitter text-[#F85559]"></i>
                       <i class="fa-brands fa-linkedin text-[#F85559]"></i>
                     </div>
-                   
                   </div>
-  
-                  
                 </div>
-
-
-
+                <div class="card w-96">
+                  <figure class="px-10 pt-10">
+                    <img src="./images/member1.png" alt="" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title">Awlad Hossain</h2>
+                    <p>Fruits Expert</p>
+                    <div class="space-x-4">
+                      <i class="fa-brands fa-facebook text-[#F85559]"></i>
+                      <i class="fa-brands fa-square-twitter text-[#F85559]"></i>
+                      <i class="fa-brands fa-linkedin text-[#F85559]"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card w-96">
+                  <figure class="px-10 pt-10">
+                    <img src="./images/member1.png" alt="" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title">Awlad Hossain</h2>
+                    <p>Fruits Expert</p>
+                    <div class="space-x-4">
+                      <i class="fa-brands fa-facebook text-[#F85559]"></i>
+                      <i class="fa-brands fa-square-twitter text-[#F85559]"></i>
+                      <i class="fa-brands fa-linkedin text-[#F85559]"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              
             </div>
           </div>
         </div>
-        
       </section>
     </main>
+
+    <footer
+      class="footer footer-center hidden p-10 bg-black text-base-content rounded"
+    >
+      <div class="flex">
+        <img src="./images/logo.png" alt="" srcset="" />
+        <h3 class="text-white text-3xl font-bold">Fruit Burst</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-flow-col gap-4 text-white">
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About Us</a>
+        <a class="link link-hover">Shop</a>
+        <a class="link link-hover">All Fruits</a>
+        <a class="link link-hover">Support</a>
+        <a class="link link-hover">My Account</a>
+      </div>
+      <div>
+        <div class="grid grid-flow-col gap-4 text-white">
+         
+        
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
